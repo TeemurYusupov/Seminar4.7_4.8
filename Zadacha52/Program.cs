@@ -44,5 +44,5 @@ for (int i = 0; i < array2.GetLength(1); i++)
         }
         
         
-        Console.Write(Math.Round(sum / array2.GetLength(0), 1) + "; ");
+        Console.Write(Math.Round(sum / array2.GetLength(0), 1) + ",");
     }
