@@ -34,25 +34,15 @@ int[,] array2 = new int[3, 4];
 FillArray(array2);
 PrintArray(array2);
 
-int sum = 0;
 
-
-
-for (int j = 0; j < array2.GetLength(1); j++)
-{
-
-    for (int i = 0; i < array2.GetLength(0); i++)
+for (int i = 0; i < array2.GetLength(1); i++)
     {
-        sum = sum + array2[i, j];
-
-        if (i == array2.GetLength(0) - 1)
+        double sum = 0;
+        for (int j = 0; j < array2.GetLength(0); j++)
         {
-            double rez = sum / array2.GetLength(0);
-
-            Console.Write($" {rez} ");
+            sum += array2[j, i];
         }
-
-
+        
+        
+        Console.Write(Math.Round(sum / array2.GetLength(0), 1) + "; ");
     }
-
-}
